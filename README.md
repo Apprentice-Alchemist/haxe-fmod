@@ -10,7 +10,7 @@ A library to integrate the FMOD audio engine with Haxe 4 games for Desktop and H
 
 Primarily focuses on simplifying the FMOD Studio project workflow through the use of a well-documented [helper library](https://tanneris.me/haxe-fmod-helper-library)
 
-The Windows integration was built on top of Aaron Shea's [C++ integration with FMOD's official API](https://tanneris.me/faxe)
+The Hxcpp/Hashlink integration was built on top of Aaron Shea's [C++ integration with FMOD's official API](https://tanneris.me/faxe)
 
 LICENCE: [MIT](https://tanneris.me/mit-license)
 

@@ -1,4 +1,3 @@
-
 ### Mac and Linux
 Put your fmod api in `lib/Linux` or `lib/Mac` so that you have the following folder structure :
 ```
