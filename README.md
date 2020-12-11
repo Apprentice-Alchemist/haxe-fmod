@@ -1,10 +1,12 @@
-# FMOD for Haxe on Windows and HTML5
+# FMOD for Haxe on Desktop and HTML5
 
 **Note: The API of this library will change early on**
 
 **Other Note: Remember to follow the rules of [FMOD's license](https://tanneris.me/FMOD-License) when using this library**
 
-A library to integrate the FMOD audio engine with Haxe 4 games for Windows and HTML5 deployments
+**Yet Another Note: OSX and Linux support is currently untested, so please indicate which OS you're on when reporting bugs**
+
+A library to integrate the FMOD audio engine with Haxe 4 games for Desktop and HTML5 deployments
 
 Primarily focuses on simplifying the FMOD Studio project workflow through the use of a well-documented [helper library](https://tanneris.me/haxe-fmod-helper-library)
 
@@ -36,6 +38,8 @@ LICENCE: [MIT](https://tanneris.me/mit-license)
 ## <a name="how-to-use-this-library"></a>How to Use This Library
 
 This library has been tested on games built with the `lime` and `openfl` cli tools, and should work on any Haxe framework that utilizes the `Project.xml` file for builds.
+
+It is also usable in regular haxe projects, see [USAGE.md](doc/USAGE.md) for some more details
 
 After configuring your project to work with this library, playing a song or sound effect is extremely simple:
 

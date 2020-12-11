@@ -3,19 +3,35 @@
 	<!-- This file will be automatically appended to the game's main Project.xml at build time -->
 	<!-- The dependency tag tells the compiler to include these files into the build of the game -->
 	<section if="windows" unless="hl">
-		<dependency name="lib/Windows/api/core/lib/x86/fmod.dll" if="HXCPP_M32"/>
-		<dependency name="lib/Windows/api/studio/lib/x86/fmodstudio.dll" if="HXCPP_M32" />
+		<dependency name="lib/Windows/api/core/lib/x86/fmod.dll" if="windows HXCPP_M32"/>
+		<dependency name="lib/Windows/api/studio/lib/x86/fmodstudio.dll" if="windows HXCPP_M32" />
 
-		<dependency name="lib/Windows/api/core/lib/x64/fmod.dll" unless="HXCPP_M32"/>
-		<dependency name="lib/Windows/api/studio/lib/x64/fmodstudio.dll" unless="HXCPP_M32"/>
+		<dependency name="lib/Windows/api/core/lib/x64/fmod.dll" if="windows" unless="HXCPP_M32"/>
+		<dependency name="lib/Windows/api/studio/lib/x64/fmodstudio.dll" if="windows" unless="HXCPP_M32"/>
 
+		<dependency name="lib/Mac/api/core/lib/libfmod.dylib" if="mac"/>
+		<dependency name="lib/Mac/api/studio/lib/libmodstudio.dylib" if="mac"/>
+		
+		<dependency name="lib/Linux/api/core/lib/x86/libfmod.so" if="linux HXCPP_M32"/>
+		<dependency name="lib/Linux/api/studio/lib/x86/libmodstudio.so" if="linux HXCPP_M32"/>
+
+		<dependency name="lib/Linux/api/core/lib/x86_64/libfmod.so" if="linux" unless="HXCPP_M32"/>
+		<dependency name="lib/Linux/api/studio/lib/x86_64/libmodstudio.so" if="linux" unless="HXCPP_M32"/>
 	</section>
 
 	<section if="hl">
-		<!-- Lime currently bundles 32 bit Hashlink -->
 		<ndll name="faxe"/>
-		<dependency name="lib/Windows/api/core/lib/x86/fmod.dll"/>
-		<dependency name="lib/Windows/api/studio/lib/x86/fmodstudio.dll"/>
+
+		<!-- Lime currently bundles 32 bit Hashlink on windows-->
+		<dependency name="lib/Windows/api/core/lib/x86/fmod.dll" if="windows"/>
+		<dependency name="lib/Windows/api/studio/lib/x86/fmodstudio.dll" if="windows"/>
+
+		<!-- 64 bit Hashlink on macos and linux -->
+		<dependency name="lib/Mac/api/core/lib/libfmod.dylib" if="mac"/>
+		<dependency name="lib/Mac/api/studio/lib/libmodstudio.dylib" if="mac"/>
+
+		<dependency name="lib/Linux/api/core/lib/x86_64/libfmod.so" if="linux"/>
+		<dependency name="lib/Linux/api/studio/lib/x86_64/libmodstudio.so" if="linux"/>
 	</section>
 
 	<section if="html5">
