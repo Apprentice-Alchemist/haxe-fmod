@@ -24,7 +24,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
+#ifndef FAXE_HL
 #include <hxcpp.h>
+#endif
 
 #include "linc_faxe.h"
 
@@ -79,7 +82,7 @@ std::map<faxe_string, unsigned int> eventCallbacksFlagsMap;
 std::thread autoUpdaterThread;
 bool autoUpdaterThreadShouldExit;
 
-//// FMOD System
+// FMOD System
 
 bool fmod_debug = false;
 HL_PRIM void HL_NAME(fmod_set_debug)(bool onOff) { fmod_debug = onOff; }
@@ -146,7 +149,7 @@ void update_fmod_async()
 	}
 }
 
-//// Sound Banks
+// Sound Banks
 
 HL_PRIM void HL_NAME(fmod_load_bank)(faxe_string bankFilePath)
 {
@@ -179,7 +182,7 @@ HL_PRIM void HL_NAME(fmod_unload_bank)(faxe_string bankName)
 	}
 }
 
-//// Events
+// Events
 
 HL_PRIM void
 	HL_NAME(fmod_create_event_instance_one_shot)(faxe_string eventPath)
@@ -496,7 +499,7 @@ HL_PRIM void
 	}
 }
 
-//// Callbacks
+// Callbacks
 
 faxe_string GetEventInstancePath(FMOD::Studio::EventInstance *eventInstance)
 {
@@ -607,5 +610,4 @@ DEFINE_PRIM(_F32, fmod_get_event_instance_param, _STRING _STRING)
 DEFINE_PRIM(_VOID, fmod_set_event_instance_param, _STRING _STRING _F32)
 DEFINE_PRIM(_VOID, fmod_set_callback_tracking_for_event_instance, _STRING)
 DEFINE_PRIM(_BOOL, fmod_check_callbacks_for_event_instance, _STRING _I32)
-// _STRING
 #endif

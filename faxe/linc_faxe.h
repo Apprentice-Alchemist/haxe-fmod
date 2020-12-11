@@ -25,14 +25,13 @@
 * THE SOFTWARE.
 */
 #pragma once
+
 #define HL_NAME(n) faxe_##n
 #ifdef FAXE_HL
 #include <hl.h>
 #define faxe_string vstring*
 #else
 #define HL_PRIM
-// #define faxe_string const char*
-// typedef const char *faxe_string;
 #define faxe_string ::String
 #endif
 

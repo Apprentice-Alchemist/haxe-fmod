@@ -84,7 +84,7 @@ Songs and sound effects are triggered by passing in the full FMOD bank event pat
 Global settings for `haxefmod` are in a `Settings.hx` file found in the installation location of this library. The relative location of this file from the root of the library is `haxefmod/Settings.hx`. Updating this library to newer versions will likely reset all global settings to their defaults.
 
 Settings available:
-```Haxe
+```haxe
 DebugMessages //Bool: Enables console output for internal FMOD API calls (can be helpful if things aren't working)
 ```
 
@@ -121,7 +121,7 @@ Checkout the [fmod-scripts](https://tanneris.me/haxe-fmod-scripts) folder in thi
 
 When using [Live Update](http://tanneris.me/FMOD-Live-Update) in FMOD Studio, turn the auto-reconnect feature off or your game will not start. Hopefully this issue can be resolved fairly easily.
 
-**Note**: The Live Update feature will only work for Windows builds. It is officially unsupported for HTML5 builds. The FMOD team said this has to do with limitations caused by running games inside a browser.
+**Note**: The Live Update feature will only work for Desktop builds. It is officially unsupported for HTML5 builds. The FMOD team said this has to do with limitations caused by running games inside a browser.
 
 ## <a name="example-project"></a>Example Project
 
@@ -134,7 +134,7 @@ The FMOD Studio project for the example game is also included.
 
 Play the game, explore the code, and open up the FMOD Studio project (try [Live Update](http://tanneris.me/FMOD-Live-Update)!). This will provide insight into the workflow, library calls, and features of this tool. Open the `EZPlatofmrer` folder directly with vscode to get autocomplete and function lookups as you look around the code.
 
-To play the game, run `lime test windows` or `lime test html5` in the `EZPlatformer` folder
+To play the game, run `lime test windows`,`lime test hl` or `lime test html5` in the `EZPlatformer` folder
 
 ## <a name="local-development"></a>Local Development
 
