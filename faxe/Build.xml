@@ -17,6 +17,7 @@
         <compilerflag value="-I${NATIVE_TOOLKIT_PATH}/api/core/inc/" />
         <compilerflag value="-I${NATIVE_TOOLKIT_PATH}/api/studio/inc/" />
         <compilerflag value="-I${HASHLINK}/include" />
+        <compilerflag value="-I/usr/local/include" if="mac linux"/>
         <file name="${this_dir}/linc_faxe.cpp" />
     </files>
 
@@ -55,7 +56,7 @@
             <lib name="-L${NATIVE_TOOLKIT_PATH}/api/studio/lib/"/>
             <lib name="-lfmod"/>
             <lib name="-lfmodstudio"/>
-
+            <lib name="-L/usr/local/lib"/>
             <lib name="-lhl"/>
         </section>
 
@@ -64,7 +65,7 @@
             <lib name="-L${NATIVE_TOOLKIT_PATH}/api/studio/lib/${FMOD_ARCH}/"/>
             <lib name="-lfmod"/>
             <lib name="-lfmodstudio"/>
-
+            <lib name="-L/usr/local/lib"/>
             <lib name="-lhl"/> <!-- Assume the user has built hl for the appropriate architecture -->
         </section>
 
